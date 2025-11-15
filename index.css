@@ -343,6 +343,29 @@ html,body { height:100%; font-family:"Cutive Mono", monospace; }
   .tech-icon { width: 40px; }
 }
 
+/* ---------- HOME ICON ---------- */
+.home-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #111;
+  color: #fff;
+  font-size: 22px;
+  padding: 12px 14px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 1000; /* always on top */
+}
+
+.home-icon:hover {
+  background: #fff;   /* accent color */
+  color: #111;
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
 
 /* ------ CONTACT SECTION ------ */
 .contact-section {
@@ -534,3 +557,39 @@ html,body { height:100%; font-family:"Cutive Mono", monospace; }
 html, body {
   overflow-x: hidden;
 }
+
+
+.tech-slider {
+  width:100%;
+  overflow:hidden;
+  padding:20px 0;
+}
+
+.slider {
+  overflow:hidden;
+  position:relative;
+}
+
+.slide-track {
+  display:flex;
+  width:calc(250px * 30); /* depends on number of images */
+  animation:scroll 30s linear infinite;
+}
+
+.tech-logo {
+  width:80px;
+  margin:0 30px;
+  transition:0.3s ease;
+  filter: grayscale(100%) brightness(0.4);
+}
+
+.tech-logo:hover {
+  filter:none;
+  transform:scale(1.15);
+}
+
+@keyframes scroll {
+  0% { transform:translateX(0); }
+  100% { transform:translateX(-50%); }
+}
+
